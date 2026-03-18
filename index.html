@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아파트 평수 계산기 - 제곱미터(㎡) 완벽 변환 가이드 | 상담모아</title>
+    <meta name="description" content="이사, 청약 필수! 아파트 전용면적 59㎡, 84㎡는 몇 평일까요? 오차 없는 정확한 평수 계산기와 부동산 상식을 확인하세요.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-username.github.io/your-repo-name/">
+    <meta property="og:title" content="아파트 평수 계산, 아직도 3.3만 곱하시나요? (오차 없는 계산법)">
+    <meta property="og:description" content="59㎡가 18평? 84㎡가 25평? 정확한 전용면적 평수 계산기와 부동산 필수 상식">
+    <meta property="og:image" content="realestate-visual.png">
+
+    <style>
+        :root {
+            --primary-color: #3b82f6; /* 상담모아 브랜드 색상 (블루) */
+            --secondary-color: #1d4ed8;
+            --bg-color: #f9fafb;
+            --text-color: #1f2937;
+            --heading-color: #111827;
+        }
+        
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        h1 {
+            color: var(--heading-color);
+            font-size: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--heading-color);
+            font-size: 1.5rem;
+            margin-top: 40px;
+        }
+        
+        .hero-image-container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .intro {
+            font-size: 1.1rem;
+            color: #4b5563;
+        }
+        
+        .cta-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .cta-box h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            font-size: 1.1rem;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .comparison-table th {
+            background-color: #f3f4f6;
+            color: var(--heading-color);
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        .math {
+            font-family: 'Courier New', monospace;
+            background-color: #e5e7eb;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.25rem; }
+            .cta-button { width: 100%; box-sizing: border-radius; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 아파트 평수 계산, 아직도 3.3만 곱하시나요? (가장 정확한 계산법)</h1>
+        
+        <div class="hero-image-container">
+            <img src="realestate-visual.png" alt="제곱미터와 평수 변환을 설명하는 아파트 도면 인포그래픽" class="hero-image">
+        </div>
+        
+        <p class="intro">이사나 청약을 준비하다 보면 가장 헷갈리는 것이 바로 **제곱미터(㎡)와 평수**의 변환입니다. 모델하우스나 네이버 부동산에서는 모두 제곱미터로 표시되는데, 우리 귀에는 여전히 "34평형"이라는 말이 더 익숙하죠.</p>
+        
+        <p>오늘은 복잡한 계산기 없이도 한눈에 확인하고, 오차 없이 정확하게 변환할 수 있는 **최적의 평수 계산 도구**와 팁을 공유합니다.</p>
+
+        <h2>1. 왜 3.3만 곱하면 오차가 생길까요?</h2>
+        <p>보통 1평을 <span class="math">3.3㎡</span>라고 하지만, 정확한 수치는 **1평 = <span class="math">3.305785㎡</span>**입니다. 작은 면적에서는 차이가 미미해 보이지만, 아파트 단위를 계산할 때는 이 작은 소수점 차이가 실제 평수와 다르게 느껴질 수 있습니다.</p>
+        
+        <ul>
+            <li><strong>대략적인 계산 (오차 발생):</strong> <span class="math">84 / 3.3 = 25.45</span>평</li>
+            <li><strong>정확한 계산:</strong> <span class="math">84 x 0.3025 = 25.41</span>평</li>
+        </ul>
+        <p>구글과 구글 검색엔진은 이렇게 정확도가 높은 정보성 콘텐츠를 선호합니다.</p>
+
+        <h2>2. 부동산 필수 상식: 전용면적 vs 공급면적</h2>
+        <p>계산기를 두드리기 전에 내가 보고 있는 숫자가 무엇인지 아는 것이 중요합니다. 이 구분을 명확히 해야 정확한 평수를 계산할 수 있습니다.</p>
+        <ul>
+            <li><strong>전용면적:</strong> 우리 가족이 실제 거실, 방, 주방으로 쓰는 공간 (청약 시 기준이 되는 면적)</li>
+            <li><strong>공급면적:</strong> 전용면적 + 계단, 복도, 엘리베이터 등 공용 공간 (보통 말하는 '몇 평형'의 기준)</li>
+        </ul>
+
+        <div class="cta-box">
+            <h3>🚀 빠르고 정확한 '평수 계산기' 활용하기</h3>
+            <p>매번 계산기를 두드리기 번거롭다면, 모바일 최적화된 상담모아의 전용 평수 계산기를 활용해 보세요. 임장(현장 답사) 중에도 바로 확인이 가능합니다.</p>
+            
+            <a href="https://sangdammoa.com/calculator/squaremeter" class="cta-button" target="_blank" rel="noopener noreferrer">
+                상담모아 평수 계산기 바로가기
+            </a>
+            
+            <p style="font-size: 0.8rem; color: #6b7280; margin-top: 10px;">제곱미터(㎡) ↔ 평수 실시간 양방향 변환, 오차 없는 소수점 반영</p>
+        </div>
+
+        <h2>3. 주요 아파트 면적 한눈에 보기 표</h2>
+        <p>자주 쓰이는 아파트 전용면적을 표로 정리해 보았습니다. 이 표를 활용해 대략적인 규모를 파악해 보세요.</p>
+        
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>전용면적(㎡)</th>
+                    <th>흔히 부르는 평수(공급)</th>
+                    <th>정확한 평수(전용 기준)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>59㎡</strong></td>
+                    <td>24평형</td>
+                    <td>약 17.8평</td>
+                </tr>
+                <tr>
+                    <td><strong>84㎡</strong></td>
+                    <td>34평형</td>
+                    <td>약 25.4평</td>
+                </tr>
+                <tr>
+                    <td><strong>101㎡</strong></td>
+                    <td>40평형</td>
+                    <td>약 30.5평</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>마치며</h3>
+        <p>부동산 거래는 큰 돈이 오가는 만큼 아주 작은 단위의 면적 차이도 중요합니다. 감으로 계산하지 마시고, 전문적인 **[상담모아 평수 계산기]**를 통해 정확한 면적을 확인해 보시기 바랍니다! 이 페이지는 깃허브를 통해 제공되는 신뢰할 수 있는 정보입니다.</p>
+    </div>
+    
+    <footer>
+        <p>© <script>document.write(new Date().getFullYear())</script> RealEstate Calc Guide. All rights reserved.</p>
+        <p>Powered by <a href="https://github.com/" target="_blank" style="color: inherit; text-decoration: none;">GitHub Pages</a></p>
+    </footer>
+</body>
+</html>
